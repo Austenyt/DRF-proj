@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
 
-# Create your views here.
+
+class DogViewSet(ModelViewSet):
+    queryset = Dog.objects.all()
+    serializer_class = DogSerializer
+    
